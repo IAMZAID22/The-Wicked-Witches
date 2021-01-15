@@ -1,13 +1,18 @@
-var hand,handImg,aimImg,b1,b2,b3,b4,e1,e2,e3,enemyImg,bg,score,hp,GameState ="alive";
+var hand,handImg,aimImg,b1,b2,b3,b4,e1,e2,e3,enemyImg,bg,score,hp,GameState ="alive",explosion,explosionImg;
 function preload(){
 handImg = loadImage("hand.png");  
 aimImg = loadImage("aim.png");  
 enemyImg = loadImage("enemy.png");
 bg = loadImage("background.png");
+explosionImg = loadImage("explosion.png");  
 }
 function setup() {
   createCanvas(800, 600)
  
+  explosion = createSprite(400,300);
+  explosion.addImage(explosionImg);
+  explosion.visible = false;
+  
   hand = createSprite(400,520);
   hand.addImage(handImg);
   hand.scale = 0.5
@@ -57,7 +62,8 @@ function draw() {
   e3.velocityX = Math.round(random(4,9))
   hand.x = mouseX;
   aim.x = mouseX;
-  
+  explosion.x = aim.x;
+  explosion.y = aim.y;  
   if(keyDown("down")){
     aim.y = aim.y+10
   }
@@ -79,16 +85,19 @@ function draw() {
   if(e1.isTouching(aim)&&keyDown("space")){
     score = score +1
     e1.x = 0
+    explosion.visible = true;
     e1.y = Math.round(random(50,400))
   }
   if(e2.isTouching(aim)&&keyDown("space")){
     score = score +1
     e2.x = 0
     e2.y = Math.round(random(50,400))
+    explosion.visible = true;
   }
   if(e3.isTouching(aim)&&keyDown("space")){
     score = score +1
     e3.x = 0
+    explosion.visible = true;
     e3.y = Math.round(random(50,400))
   }
   if(e1.x>=800){
