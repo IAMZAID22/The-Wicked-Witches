@@ -70,6 +70,9 @@ function draw() {
    if(keyDown("up")){
     aim.y = aim.y-10
        }
+    if(keyDown("space")=== false){
+      explosion.visible = false;
+    }
   if(e1.isTouching(e2)||e1.isTouching(e3)){
     e1.x = 0
     e1.y = Math.round(random(50,400))
