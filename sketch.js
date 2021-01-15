@@ -52,9 +52,9 @@ function draw() {
   text("Citizens Alive:"+hp,600,50)
   text("Score:"+score,50,50)
   if(GameState === "alive"){
-  e1.velocityX = Math.round(random(2,6))
-  e2.velocityX = Math.round(random(2,6))
-  e3.velocityX = Math.round(random(2,6))
+  e1.velocityX = Math.round(random(4,9))
+  e2.velocityX = Math.round(random(4,9))
+  e3.velocityX = Math.round(random(4,9))
   hand.x = mouseX;
   aim.x = mouseX;
   
