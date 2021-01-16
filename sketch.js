@@ -70,7 +70,7 @@ function draw() {
    if(keyDown("up")){
     aim.y = aim.y-10
        }
-    if(keyDown("space")=== false){
+    if(keyDown("space")=== false&&aim.isTouching(e1)||aim.isTouching(e2)||aim.isTouching(e3)){
       explosion.visible = false;
     }
   if(e1.isTouching(e2)||e1.isTouching(e3)){
