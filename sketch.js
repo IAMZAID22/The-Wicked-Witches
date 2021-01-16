@@ -25,7 +25,7 @@ function setup() {
   b1.visible = false
   b1.shapeColor = "black"
   
-  b2 = createSprite(400,1,800,1);
+  b2 = createSprite(400,1,1,600);
   b2.visible = false
   
   b3= createSprite(1,300,1,600);
@@ -128,5 +128,8 @@ function draw() {
     text("You Lost",400,300);
   }
   aim.collide(b1)
+  aim.collide(b2)
+  aim.collide(b3)
+  aim.collide(b4)
   drawSprites();
 }
