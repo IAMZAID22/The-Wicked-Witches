@@ -62,8 +62,10 @@ function draw() {
   e3.velocityX = Math.round(random(4,9))
   hand.x = mouseX;
   aim.x = mouseX;
+    if(aim.isTouching && e1||aim.isTouching && e2||aim.isTouching && e3){
   explosion.x = aim.x;
   explosion.y = aim.y;  
+      }
   if(keyDown("down")){
     aim.y = aim.y+10
   }
