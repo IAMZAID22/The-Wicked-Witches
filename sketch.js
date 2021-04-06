@@ -47,7 +47,7 @@ function setup() {
   e3.scale = 0.4
   
   score = 0;
-  hp = 10
+  hp = 100
 }
 
 function draw() {
@@ -129,6 +129,9 @@ function draw() {
     fill("white");
     text("You Lost",400,300);
   }
+  
+  
+  
   aim.collide(b1)
   aim.collide(b2)
   aim.collide(b3)
