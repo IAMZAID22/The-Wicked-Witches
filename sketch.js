@@ -56,6 +56,11 @@ function draw() {
   fill("white")
   text("Timer:"+hp,600,50)
   text("Score:"+score,50,50)
+  
+  text("Press space to shoot",300,100);
+  text("Press up &  down arrows to aim",300,120);
+  text("Use mouse to move the gun",300,140);
+    
   if(GameState === "alive"){
   e1.velocityX = Math.round(random(4,9))
   e2.velocityX = Math.round(random(4,9))
