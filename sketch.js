@@ -54,7 +54,7 @@ function draw() {
   background(bg);
   textSize(25);
   fill("white")
-  text("Citizens Alive:"+hp,600,50)
+  text("Timer:"+hp,600,50)
   text("Score:"+score,50,50)
   if(GameState === "alive"){
   e1.velocityX = Math.round(random(4,9))
