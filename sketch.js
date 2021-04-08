@@ -54,7 +54,7 @@ function draw() {
   background(bg);
   textSize(25);
   fill("white")
-  text("Timer:"+hp,600,50)
+  text("Escaped Enemies:"+hp,580,50)
   text("Score:"+score,50,50)
   
   text("Press space to shoot",200,50);
